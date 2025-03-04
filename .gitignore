@@ -1,0 +1,4 @@
+admin/.dbdata/*
+.vscode/*
+admin/admin/__pycache__/*
+admin/products/__pycache__/*
