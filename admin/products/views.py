@@ -4,6 +4,7 @@ from .models import Products, User
 from .serializers import ProductSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from .producer import publish, publish_to_main
 import random
 # Create your views here.
 
@@ -11,6 +12,8 @@ class ProductViewSet(viewsets.ViewSet):
   def list(self, request): # GET api/products
     products = Products.objects.all()
     serializer = ProductSerializer(products, many=True)
+    publish()
+    publish_to_main()
     return Response(serializer.data)
 
   def create(self, request): # POST api/products

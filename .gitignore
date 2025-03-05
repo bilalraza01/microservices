@@ -1,4 +1,4 @@
-admin/.dbdata/*
+**/.dbdata/*
 .vscode/*
 **/__pycache__
 **/*.pyc
